@@ -26,4 +26,13 @@ class Item
     @label = label
     @label.items.push(self)
   end
+
+  private
+
+  def can_be_archived?
+    return true if (Date.today - @publish_date).to_i / 365 > 10
+
+    false
+  end
+
 end
