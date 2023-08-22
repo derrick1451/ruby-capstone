@@ -3,7 +3,9 @@ require_relative './lib/music/album_collection'
 require_relative './lib/games/game_collection'
 
 class Ap
-
+    def initialize
+        
+    end
 
     def menu
         puts "Please choose an option by entering a number:\n\n"
@@ -21,5 +23,9 @@ class Ap
         puts '12 - Add a Author'
         puts '13 - Exit'
         print 'Type your option: '
+    end
+
+    def main
+        
     end
 end 
