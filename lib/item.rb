@@ -19,9 +19,11 @@ class Item
   def add_genre(genre)
     @genre = genre
   end
+
   def add_author(author)
     @author = author
   end
+
   def add_label(label)
     @label = label
     @label.items.push(self)
@@ -34,6 +36,7 @@ class Item
 
     false
   end
+
   def create_date(date_str)
     return nil if date_str.nil?
 
