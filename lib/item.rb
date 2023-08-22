@@ -11,4 +11,8 @@ class Item
       @publish_date = create_date(params[:publish_date])
       @archived = params[:archived] || false
     end
+    def move_to_archive
+        @archived = true if can_be_archived?
+      end
+    
 end
