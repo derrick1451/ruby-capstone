@@ -100,11 +100,10 @@ To run the project, instantiate the class files in `solver.rb` and execute the f
 - GitHub: [Benawi](https://github.com/Benawi)
 - Linkdin: [Habtamu](https://www.linkedin.com/in/habtamualemayehu/)
 
-### 👤 **-------------**
+### 👤 ** Kayjeee**
 
-- GitHub: [-----](----)
-- Twitter: [-----](-----)
-- LinkedIn: [----](-----)
+- GitHub: [kayjeee](https://github.com/kayjeee)
+- LinkedIn: [kagiso sebogodi](https://www.linkedin.com/in/kagiso-sebogodi/)
 ### 👤 **-------------**
 
 - GitHub: [-----](----)
