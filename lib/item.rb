@@ -22,4 +22,8 @@ class Item
   def add_author(author)
     @author = author
   end
+  def add_label(label)
+    @label = label
+    @label.items.push(self)
+  end
 end
