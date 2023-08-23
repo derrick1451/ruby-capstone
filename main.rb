@@ -1,10 +1,10 @@
 # require_relative './lib/book_collection'
-require_relative './lib/classes/album_collection'
+require_relative 'lib/classes/album_collection'
 # require_relative './lib/game_collection'
 
 class App
-  #include GameCollection
-   include AlbumCollection
+  # include GameCollection
+  include AlbumCollection
   # include BookCollection
 
   def initialize
