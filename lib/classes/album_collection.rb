@@ -39,8 +39,8 @@ module AlbumCollection
       end
     end
     print 'Published Date: '
-    # published_date = gets.chomp
-    @albums << MusicAlbum.new(on_spotify)
+    published_date = gets.chomp
+    @albums << MusicAlbum.new(on_spotify, published_date)
   end
 
   def create_genre
