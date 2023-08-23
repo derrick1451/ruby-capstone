@@ -108,6 +108,12 @@ module PreserveData
       @labels << new_label
     end
   end
-
+  def load_relations(relational_class, array)
+    array.each do |item|
+      item_id = JSON.parse(item)['id']
+      item = @items[item_id]
+      relational_class.add_item(item) unless item.nil?
+    end
+  end
 end
 
