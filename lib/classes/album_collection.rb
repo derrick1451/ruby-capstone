@@ -1,5 +1,5 @@
-require_relative './music_album'
-require_relative './genre'
+require_relative 'music_album'
+require_relative 'genre'
 require_relative '.item'
 require_relative '../helpers/collection_handler'
 
@@ -13,6 +13,7 @@ module AlbumCollection
     end
     puts ''
   end
+
   def list_all_genres(genres: @genres)
     return if check_empty(genres, 'Genres', '11')
 
@@ -21,6 +22,7 @@ module AlbumCollection
     end
     puts ''
   end
+
   def create_album
     input = nil
     on_spotify = nil
@@ -40,6 +42,7 @@ module AlbumCollection
     published_date = gets.chomp
     @albums << MusicAlbum.new(on_spotify, published_date)
   end
+
   def create_genre
     item = select_item_for('Genre')
 
@@ -49,7 +52,7 @@ module AlbumCollection
     item.add_genre(genre)
     @genres.push(genre)
   end
-  
+
   private
 
   def check_empty(list, list_name, option)
