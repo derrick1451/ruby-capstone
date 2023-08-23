@@ -77,5 +77,22 @@ module PreserveData
     end
   end
 
+  def load_authors
+    authors_path = './lib/helpers/json/authors.json'
+    return [] unless File.exist?(authors_path)
+
+    file = File.open(authors_path)
+    file_data = file.read if file
+    authors_data = JSON.parse(file_data)
+    authors_data.each do |data|
+      json_author = JSON.parse(data)
+      item_array = json_author['items']
+      new_author = Author.from_json(json_author)
+      load_relations(new_author, item_array)
+      @authors << new_author
+    end
+  end
+
+
 end
 
