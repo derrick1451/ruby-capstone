@@ -4,7 +4,7 @@ require 'json'
 module PreserveData
   def save_collections
     base_folder = './lib/helpers/json'
-    FileUtils.mkdir_p(base_folder) unless Dir.exist?(base_folder)
+    FileUtils.mkdir_p(base_folder)
     save_albums
     save_labels
     save_genres
@@ -26,19 +26,21 @@ module PreserveData
     json_albums = @albums.map(&:to_json)
     File.write(albums_path, JSON.generate(json_albums))
   end
-  
+
   def save_labels
     labels_path = './lib/helpers/json/labels.json'
 
     json_labels = @labels.map(&:to_json)
     File.write(labels_path, JSON.generate(json_labels))
   end
+
   def save_genres
     genres_path = './lib/helpers/json/genres.json'
 
     json_genres = @genres.map(&:to_json)
     File.write(genres_path, JSON.generate(json_genres))
   end
+
   def save_authors
     authors_path = './lib/helpers/json/authors.json'
 
@@ -92,6 +94,7 @@ module PreserveData
       @authors << new_author
     end
   end
+
   def load_labels
     labels_path = './lib/helpers/json/labels.json'
     return [] unless File.exist?(labels_path)
@@ -108,12 +111,13 @@ module PreserveData
       @labels << new_label
     end
   end
+
   def load_relations(relational_class, array)
     array.each do |item|
       item_id = JSON.parse(item)['id']
       item = @items[item_id]
+
       relational_class.add_item(item) unless item.nil?
     end
   end
 end
-
