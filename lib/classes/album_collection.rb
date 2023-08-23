@@ -21,5 +21,24 @@ module AlbumCollection
     end
     puts ''
   end
-  
+  def create_album
+    input = nil
+    on_spotify = nil
+    while input != 'y' && input != 'n'
+      print 'On Spotify? [Y/N]: '
+      input = gets.chomp.downcase
+      case input
+      when 'y'
+        on_spotify = true
+      when 'n'
+        on_spotify = false
+      else
+        puts 'Wrong input! Please try type Y/y for yes or N/n for no:'
+      end
+    end
+    print 'Published Date: '
+    published_date = gets.chomp
+    @albums << MusicAlbum.new(on_spotify, published_date)
+  end
+
 end
