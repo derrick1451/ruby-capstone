@@ -41,4 +41,12 @@ module CollectionHandler
     end
     items[item_index]
   end
+
+  def display_items_options(options, class_name)
+    puts "What type of Item you want to add to #{class_name}? Select a number from options below:"
+
+    options.each_with_index do |(key, _value), i|
+      puts "[#{i}] - #{key}"
+    end
+  end
 end
