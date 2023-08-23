@@ -45,5 +45,20 @@ module PreserveData
     json_authors = @authors.map(&:to_json)
     File.write(authors_path, JSON.generate(json_authors))
   end
+
+  def load_albums
+    albums_path = './lib/helpers/json/albums.json'
+    return [] unless File.exist?(albums_path)
+
+    file = File.open(albums_path)
+    file_data = file.read if file
+    albums_data = JSON.parse(file_data)
+    albums_data.each do |data|
+      json_data = JSON.parse(data)
+      item = MusicAlbum.from_json(json_data)
+      @albums << item
+      @items[json_data['id']] = item
+    end
+  end
 end
 
