@@ -27,5 +27,12 @@ module PreserveData
     File.write(albums_path, JSON.generate(json_albums))
   end
   
+  def save_labels
+    labels_path = './lib/helpers/json/labels.json'
+
+    json_labels = @labels.map(&:to_json)
+    File.write(labels_path, JSON.generate(json_labels))
+  end
+
 end
 
