@@ -39,5 +39,11 @@ module PreserveData
     json_genres = @genres.map(&:to_json)
     File.write(genres_path, JSON.generate(json_genres))
   end
+  def save_authors
+    authors_path = './lib/helpers/json/authors.json'
+
+    json_authors = @authors.map(&:to_json)
+    File.write(authors_path, JSON.generate(json_authors))
+  end
 end
 
