@@ -53,4 +53,12 @@ module CollectionHandler
   def display_items_of_class(item, index)
     "[#{index}] - #{item}"
   end
+
+  def list_available_items
+    available_options = {}
+
+    available_options['albums'] = @albums unless @albums.empty?
+
+    available_options
+  end
 end
