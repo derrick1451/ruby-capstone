@@ -49,4 +49,10 @@ module AlbumCollection
     item.add_genre(genre)
     @genres.push(genre)
   end
+  
+  private
+
+  def check_empty(list, list_name, option)
+    puts "#{list_name} list is empty, try adding a new value by selecting number [#{option}]" if list.empty?
+  end
 end
