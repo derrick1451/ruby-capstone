@@ -1,5 +1,6 @@
-CREATE DATABASE catalogue_of_things;
+-- CREATE DATABASE catalogue_of_things;
 -- create books table 
+
 CREATE TABLE books (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     genre varchar(100) NOT NULL,
@@ -19,6 +20,7 @@ CREATE TABLE labels(
     color varchar(100) NOT NULL,
     items varchar(100)[] NOT NULL
 );
+
 
 CREATE TABLE albums (
   id int GENERATED ALWAYS AS IDENTITY,
@@ -50,3 +52,24 @@ CREATE TABLE items (
   CONSTRAINT kf_albums FOREIGN KEY(album_id) REFERENCES albums(id) ON DELETE CASCADE,
   CONSTRAINT kf_genres FOREIGN KEY(genre_id) REFERENCES genres(id) ON DELETE CASCADE
 ); 
+
+
+-- create games table
+CREATE TABLE games (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  multiplayer VARCHAR(100) NOT NULL,
+  last_played_at DATE NOT NULL,
+  publish_date DATE,
+  author_id INT,
+  archived BOOLEAN,
+  PRIMARY KEY (id)
+  FOREIGN KEY (author_id) REFERENCES authors (id)
+);
+
+-- create author table
+CREATE TABLE authors (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  first_name VARCHAR(100) NOT NULL,
+  last_name VARCHAR(100) NOT NULL,
+  PRIMARY KEY (id)
+);
