@@ -1,3 +1,4 @@
+# rubocop:enable Metrics/CyclomaticComplexity, Metrics/MethodLength
 # require_relative './lib/book_collection'
 require_relative 'lib/classes/album_collection'
 # require_relative './lib/game_collection'
