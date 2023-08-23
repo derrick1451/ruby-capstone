@@ -40,5 +40,13 @@ module AlbumCollection
     published_date = gets.chomp
     @albums << MusicAlbum.new(on_spotify, published_date)
   end
+  def create_genre
+    item = select_item_for('Genre')
 
+    print 'Name: '
+    genre = gets.chomp
+    genre = Genre.new(genre)
+    item.add_genre(genre)
+    @genres.push(genre)
+  end
 end
