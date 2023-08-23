@@ -1,6 +1,7 @@
 require_relative 'item'
 class Book < Item
   attr_accessor :publisher, :cover_state
+
   def initialize(publiser, cover_state)
     super(publish_date)
     @publiser = publiser
