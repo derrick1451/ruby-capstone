@@ -33,6 +33,11 @@ module PreserveData
     json_labels = @labels.map(&:to_json)
     File.write(labels_path, JSON.generate(json_labels))
   end
+  def save_genres
+    genres_path = './lib/helpers/json/genres.json'
 
+    json_genres = @genres.map(&:to_json)
+    File.write(genres_path, JSON.generate(json_genres))
+  end
 end
 
