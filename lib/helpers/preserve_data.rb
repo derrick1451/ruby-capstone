@@ -92,7 +92,22 @@ module PreserveData
       @authors << new_author
     end
   end
+  def load_labels
+    labels_path = './lib/helpers/json/labels.json'
+    return [] unless File.exist?(labels_path)
 
+    file = File.open(labels_path)
+    file_data = file.read if file
+    labels_data = JSON.parse(file_data)
+
+    labels_data.each do |data|
+      json_label = JSON.parse(data)
+      item_array = json_label['items']
+      new_label = Label.from_json(json_label)
+      load_relations(new_label, item_array)
+      @labels << new_label
+    end
+  end
 
 end
 
