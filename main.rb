@@ -1,11 +1,11 @@
-#require_relative './lib/books/book_collection'
-require_relative './lib/music/album_collection'
-#require_relative './lib/games/game_collection'
+# require_relative './lib/books/book_collection'
+require_relative 'lib/music/album_collection'
+# require_relative './lib/games/game_collection'
 
 class App
   include GameCollection
-  #include AlbumCollection
-  #include BookCollection
+  # include AlbumCollection
+  # include BookCollection
 
   def initialize
     instantiate_common_variables
@@ -46,20 +46,20 @@ def main
     #  app.list_all_books
     when 2
       app.list_all_albums
-   # when 3
-   #   app.list_all_games
+    # when 3
+    #   app.list_all_games
     when 4
       app.list_all_genres
     when 5
       app.list_all_labels
     when 6
       app.list_all_authors
-   # when 7
-   #   app.add_a_book
+    # when 7
+    #   app.add_a_book
     when 8
       app.create_album
-  #  when 9
-  #    app.add_game
+    #  when 9
+    #    app.add_game
     when 10
       app.add_a_label
     when 11
