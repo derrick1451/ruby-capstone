@@ -60,5 +60,22 @@ module PreserveData
       @items[json_data['id']] = item
     end
   end
+
+  def load_genres
+    genres_path = './lib/helpers/json/genres.json'
+    return [] unless File.exist?(genres_path)
+
+    file = File.open(genres_path)
+    file_data = file.read if file
+    genres_data = JSON.parse(file_data)
+    genres_data.each do |data|
+      json_genre = JSON.parse(data)
+      item_array = json_genre['items']
+      new_genre = Genre.from_json(json_genre)
+      load_relations(new_genre, item_array)
+      @genres << new_genre
+    end
+  end
+
 end
 
