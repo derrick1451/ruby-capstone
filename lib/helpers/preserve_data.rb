@@ -5,18 +5,14 @@ module PreserveData
   def save_collections
     base_folder = './lib/helpers/json'
     FileUtils.mkdir_p(base_folder) unless Dir.exist?(base_folder)
-    save_books
     save_albums
-    save_games
     save_labels
     save_genres
     save_authors
   end
 
   def load_collections
-    load_books
     load_albums
-    load_games
     load_labels
     load_genres
     load_authors
@@ -24,5 +20,12 @@ module PreserveData
 
   private
 
+  def save_albums
+    albums_path = './lib/helpers/json/albums.json'
+
+    json_albums = @albums.map(&:to_json)
+    File.write(albums_path, JSON.generate(json_albums))
+  end
+  
 end
 
