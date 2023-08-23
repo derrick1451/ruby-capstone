@@ -49,4 +49,8 @@ module CollectionHandler
       puts "[#{i}] - #{key}"
     end
   end
+
+  def display_items_of_class(item, index)
+    "[#{index}] - #{item}"
+  end
 end
