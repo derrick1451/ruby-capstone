@@ -7,7 +7,7 @@ module CollectionHandler
   def instantiate_common_variables
     @albums = []
     @genres = []
-    @games =  []
+    @games = []
     @labels = []
     @books = []
     @items = {}

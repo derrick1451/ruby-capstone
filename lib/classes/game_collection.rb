@@ -63,6 +63,7 @@ module GameCollection
       create_new_author(item)
     end
   end
+
   private
 
   def select_author_from_list
