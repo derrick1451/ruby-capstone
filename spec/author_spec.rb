@@ -1,5 +1,5 @@
-require '../lib/classes/author'
-require '../lib/classes/item'
+require_relative '../lib/classes/author'
+require_relative '../lib/classes/item'
 
 describe Author do
   describe 'Testing the author class' do
