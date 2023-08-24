@@ -1,32 +1,41 @@
--- CREATE DATABASE catalogue_of_things;
+ CREATE DATABASE catalogue_of_things;
 -- create books table 
-
-CREATE TABLE books (
-    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    genre varchar(100) NOT NULL,
-    author varchar(100) NOT NULL,
-    source varchar(100) NOT NULL,
-    label varchar(100) NOT NULL,
-    publish_date DATE NOT NULL,
-    arcieved BOOLEAN,
-    publisher varchar(100) NOT NULL,
-    cover_state varchar(100) NOT NULL
+CREATE TABLE book (
+  id int GENERATED ALWAYS AS IDENTITY(MINVALUE 0 START WITH 0 CACHE 20) NOT NULL,
+  publisher varchar(30),
+  cover_state varchar(30),
+  item_id int,
+  CONSTRAINT fk_item FOREIGN KEY(item_id) REFERENCES items(id) ON DELETE CASCADE,
+  PRIMARY KEY (id)
 );
 
--- create labels table
-CREATE TABLE labels(
-    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    title varchar(100) NOT NULL,
-    color varchar(100) NOT NULL,
-    items varchar(100)[] NOT NULL
+CREATE TABLE label (
+  id int GENERATED ALWAYS AS IDENTITY NOT NULL,
+  title varchar(50) NOT NULL,
+  color varchard(50) NOT NULL,
+  PRIMARY KEY(id)
 );
 
-
+CREATE TABLE items (
+  id int GENERATED ALWAYS AS IDENTITY(MINVALUE 0 START WITH 0 CACHE 20) NOT NULL,
+  genre int,
+  author int,
+  label int,
+  publish_date date,
+  archived boolean,
+  author_id int,
+  game_id int,
+  book_id int,
+  CONSTRAINT fk_label FOREIGN KEY(label) REFERENCES label(id) ON DELETE CASCADE,
+  CONSTRAINT fk_book FOREIGN KEY(book_id) REFERENCES book(id) ON DELETE CASCADE,
+  PRIMARY KEY (id)
+);
 CREATE TABLE albums (
   id int GENERATED ALWAYS AS IDENTITY,
   on_spotify boolean,
   PRIMARY KEY(id),
-  item_id int NOT NULL
+  item_id int NOT NULL,
+  CONSTRAINT kf_items FOREIGN KEY(item_id) REFERENCES items(id) ON DELETE CASCADE
 );
 
 CREATE TABLE genres (
@@ -49,28 +58,36 @@ CREATE TABLE items (
   album_id int, 
   genre_id int,
   CONSTRAINT kf_albums FOREIGN KEY(album_id) REFERENCES albums(id) ON DELETE CASCADE,
-  CONSTRAINT kf_genres FOREIGN KEY(genre_id) REFERENCES genres(id) ON DELETE CASCADE,
-  CONSTRAINT kf_game FOREIGN KEY(game_id ) REFERENCES games(id) ON DELETE CASCADE,
-  CONSTRAINT kf_author FOREIGN KEY(author_id) REFERENCES itmes(id) ON DELETE CASCADE
+  CONSTRAINT kf_genres FOREIGN KEY(genre_id) REFERENCES genres(id) ON DELETE CASCADE
 ); 
-
-
--- create games table
 CREATE TABLE games (
-  id INT GENERATED ALWAYS AS IDENTITY,
-  multiplayer VARCHAR(100) NOT NULL,
-  last_played_at DATE NOT NULL,
-  publish_date DATE,
-  author_id INT,
-  archived BOOLEAN,
-  PRIMARY KEY (id)
-  FOREIGN KEY (author_id) REFERENCES authors (id)
+  id int GENERATED ALWAYS AS IDENTITY(MINVALUE 0 START WITH 0 CACHE 20) NOT NULL,
+  PRIMARY KEY (id),
+  title varchar(30),
+  multiplayer boolean,
+  last_played_at date,
+  item_id int NOT NULL,
+  CONSTRAINT kf_items FOREIGN KEY(item_id) REFERENCES items(id) ON DELETE CASCADE,
 );
 
--- create author table
 CREATE TABLE authors (
-  id INT GENERATED ALWAYS AS IDENTITY,
-  first_name VARCHAR(100) NOT NULL,
-  last_name VARCHAR(100) NOT NULL,
-  PRIMARY KEY (id)
+  id int GENERATED ALWAYS AS IDENTITY(MINVALUE 0 START WITH 0 CACHE 20) NOT NULL,
+  PRIMARY KEY (id),
+  first_name varchar(30),
+  last_name varchar(30)
+);
+
+CREATE TABLE items (
+  id int GENERATED ALWAYS AS IDENTITY(MINVALUE 0 START WITH 0 CACHE 20) NOT NULL,
+  PRIMARY KEY (id),
+  genre varchar(30),
+  author varchar(30),
+  source varchar(30),
+  label varchar(30),
+  publish_date date,
+  archived boolean,
+  author_id int,
+  game_id int,
+  CONSTRAINT kf_authors FOREIGN KEY(author_id) REFERENCES authors(id) ON DELETE CASCADE,
+  CONSTRAINT kf_games FOREIGN KEY(game_id) REFERENCES games(id) ON DELETE CASCADE
 );
