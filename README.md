@@ -113,6 +113,9 @@ To run the project, instantiate the class files in `solver.rb` and execute the f
 
 ## 🔭 Future Features <a name="future-features"></a>
 - [ ]  Optimize the Class method tests.🚀
+- [ ]  Connect with database server
+- [ ]  Enhance the app with GUI
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
