@@ -48,7 +48,7 @@ This repository includes  a console app that will help you to keep a record of d
 - [x] Build interactive console apps
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 👁 Walkthrough <a name="#Walkthrough"></a>
+## 👁 Walkthrough <a name="Walkthrough"></a>
 
 [Ruby group capstone - Catalog of my things](https://drive.google.com/file/d/1p60Brs-sTw6bzOQo_GjojbghKLumlIWp/view?usp=sharing)
 
