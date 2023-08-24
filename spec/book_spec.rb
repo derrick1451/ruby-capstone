@@ -1,4 +1,4 @@
-require_relative'../lib/classes/book'
+require_relative '../lib/classes/book'
 require 'rspec'
 describe Book do
   before(:each) do
