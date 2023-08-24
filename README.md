@@ -48,11 +48,10 @@ This repository includes  a console app that will help you to keep a record of d
 - [x] Store data in files.
 - [x] Build interactive console apps
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<!-- 
 
-## 👁 Walkthrough <a name="#Walkthrough"></a>
+## 👁 Walkthrough <a ame="#Walkthrough"></a>
 
-[Space Travelers' Hub Web App Walkthrough](https://drive.google.com/file/d/1p60Brs-sTw6bzOQo_GjojbghKLumlIWp/view?usp=sharing)
+[Ruby group capstone - Catalog of my things](https://drive.google.com/file/d/1p60Brs-sTw6bzOQo_GjojbghKLumlIWp/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -121,7 +120,7 @@ To run the project, instantiate the class files in `solver.rb` and execute the f
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-Contributions, [issues](https://github.com/Benawi/OOP-School-Library/issues), and feature requests are welcome!
+Contributions, [issues](https://github.com/derrick1451/ruby-capstone/issues), and feature requests are welcome!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
