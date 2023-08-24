@@ -26,8 +26,7 @@ CREATE TABLE albums (
   id int GENERATED ALWAYS AS IDENTITY,
   on_spotify boolean,
   PRIMARY KEY(id),
-  item_id int NOT NULL,
-  CONSTRAINT kf_items FOREIGN KEY(item_id) REFERENCES items(id) ON DELETE CASCADE
+  item_id int NOT NULL
 );
 
 CREATE TABLE genres (
@@ -50,7 +49,9 @@ CREATE TABLE items (
   album_id int, 
   genre_id int,
   CONSTRAINT kf_albums FOREIGN KEY(album_id) REFERENCES albums(id) ON DELETE CASCADE,
-  CONSTRAINT kf_genres FOREIGN KEY(genre_id) REFERENCES genres(id) ON DELETE CASCADE
+  CONSTRAINT kf_genres FOREIGN KEY(genre_id) REFERENCES genres(id) ON DELETE CASCADE,
+  CONSTRAINT kf_game FOREIGN KEY(game_id ) REFERENCES games(id) ON DELETE CASCADE,
+  CONSTRAINT kf_author FOREIGN KEY(author_id) REFERENCES itmes(id) ON DELETE CASCADE
 ); 
 
 
