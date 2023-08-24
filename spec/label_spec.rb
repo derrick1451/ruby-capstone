@@ -4,7 +4,6 @@ require_relative '../lib/classes/book'
 require_relative '../lib/classes/game'
 require_relative '../lib/classes/music_album'
 require 'json'
-
 describe Label do
   before(:each) do
     @label1 = Label.new('Funny Items', 'Red')
@@ -61,6 +60,7 @@ describe Label do
         color: @label1.color,
         items: @label1.items.map(&:to_json)
       )
+
       expected_obj2 = JSON.parse(JSON.dump(
                                    title: @label2.title,
                                    color: @label2.color,
