@@ -8,5 +8,12 @@ describe MusicAlbum do
       expect(new_album.on_spotify).to eq true
       expect(new_album.published_date).to eq Date.iso8601('19970622')
     end
-end
+    it 'Create a MusicAlbum with incorrect value for published_date' do
+      new_album = MusicAlbum.new(true, 2)
+      expect(new_album.on_spotify).to eq true
+      expect(new_album.published_date).to eq Date.today
+    end
+  end
+ 
+ 
 end
