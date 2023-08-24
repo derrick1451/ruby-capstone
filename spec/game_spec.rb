@@ -1,4 +1,4 @@
-require './lib/classes/game'
+require '../lib/classes/game'
 
 describe Game do
   describe 'Testing the Game class' do
@@ -15,11 +15,12 @@ describe Game do
 
   describe 'Testing the Game class methods' do
     context 'When can_be_archived method is called' do
-      it "Should return true if parent's method returns true AND if last_played_at is older than 2 years, otherwise returns false" do
+      it "Should return true if parent's method returns true AND if last_played_at
+      is older than 2 years, otherwise returns false" do
         new_game1 = Game.new('test', true, 3, '2021-12-02')
         new_game1.move_to_archive
         expect(new_game1.archived).to eq false
-new_game2 = Game.new('test', true, 4, '2010-12-02')
+        new_game2 = Game.new('test', true, 4, '2010-12-02')
         new_game2.move_to_archive
         expect(new_game2.archived).to eq true
 
