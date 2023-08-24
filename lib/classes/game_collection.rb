@@ -2,7 +2,6 @@ require 'json'
 require_relative 'game'
 require_relative 'author'
 require_relative '../helpers/collection_handler'
-
 module GameCollection
   include CollectionHandler
   attr_accessor :games
