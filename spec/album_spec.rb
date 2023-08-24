@@ -26,5 +26,11 @@ describe MusicAlbum do
       expect(new_album.archived).to eq false
     end
   end
-  
+  context 'When testing the Album methods' do
+    it 'Should parse album data' do
+      new_album = MusicAlbum.new(true, '20210101')
+      expect(new_album.to_json(new_album)).to eq '{"on_spotify":true,"published_date":"2021-01-01","archived":false}'
+    end
+    
+  end
 end
