@@ -1,66 +1,58 @@
 <a name="readme-top"></a>
 
-
-<div align="center">
-<h1><b>Ruby group capstone - Catalog of my things</b></h1>
-
-</div>
+# <div align="center">🛰Ruby group capstone - Catalog of my things 🚀</div>
 
 # 📗 Table of Contents
 
-- [📗 Table of Contents](#-table-of-contents)
-- [📖 Ruby group capstone - Catalog of my things ](#-ruby-group-capstone---catalog-of-my-things-)
-  - [🛠 Built With ](#-built-with-)
-  - [Tech Stack ](#tech-stack-)
-  - [🔑 Key Features ](#-key-features-)
-    - [Ruby group capstone - Catalog of my things PROJECT Requirements](#ruby-group-capstone---catalog-of-my-things-project-requirements)
-  - [🚶‍♀️🚶‍♀️ Walk Through ](#️️-walk-through-)
-  - [💻 Getting Started ](#-getting-started-)
-    - [Prerequisites](#prerequisites)
-    - [Setup](#setup)
-    - [Install](#install)
-    - [Run Tests ](#run-tests-)
-  - [👥 Authors ](#-authors-)
-    - [👤 **Habtamu Alemayehu**](#-habtamu-alemayehu)
-    - [👤 **Kayjeee**](#-kayjeee)
-    - [👤 **okongo derrick**](#-okongo-derrick)
-  - [🔭 Future Features ](#-future-features-)
-  - [🤝 Contributing ](#-contributing-)
-  - [⭐️ Show your support ](#️-show-your-support-)
-  - [🙏 Acknowledgments ](#-acknowledgments-)
-  - [📝 License ](#-license-)
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+    <!-- - [Live Demo](#live-demo) -->
+    - [Walkthrough](#Walkthrough)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+
+- [📝 License](#license)
 
 # 📖 Ruby group capstone - Catalog of my things <a name="about-project"></a>
-This repository includes  a console app that will help you to keep a record of different types of things you own: books, music albums, movies, and games. 
+
+This repository includes  a console app that will help you to keep a record of different types of things you own: books, music albums, movies, and games.  project is a repository consisting of the following files:
+
+- Ruby files
+- SQL files
+- Ruby linters file
+
 ## 🛠 Built With <a name="built-with"></a>
 
-## Tech Stack <a name="tech-stack"></a>
+### Tech Stack <a name="tech-stack"></a>
 
-<ul>
-
-  <li><a href="https://github.com/microverseinc/curriculum-ruby/blob/main/simple-ruby/lessons/basic_syntax.md">Ruby</a></li>
-  <!-- <li><a href="https://microverse.notion.site/HTML-CSS-Get-a-head-start-275eb85fd34b4416aa06ec635d69cdaf">HTML</a></li>
-  <li><a href="https://microverse.notion.site/HTML-CSS-Get-a-head-start-275eb85fd34b4416aa06ec635d69cdaf">CSS</a></li>
-      <li><a href="https://microverse.notion.site/HTML-CSS-Get-a-head-start-275eb85fd34b4416aa06ec635d69cdaf">JS</a></li>
-      <li><a href="https://react.dev/learn/start-a-new-react-project#create-react-app">React </a></li>
-       <li><a href="https://react-redux.js.org/">React Redux</a>
-        <li><a href="https://www.npmjs.com/package/redux-logger">Redux Logger</a></li>
-         <li><a href="https://github.com/microverseinc/curriculum-react-redux/blob/main/math-magicians/articles/react_router.md">React Router</a></li> -->
-         
+  <ul>
+   <li><a href="https://github.com/microverseinc/curriculum-ruby/blob/main/simple-ruby/lessons/basic_syntax.md">Ruby</a></li>
 </ul>
 
-## 🔑 Key Features <a name="key-features"></a>
-
-### Ruby group capstone - Catalog of my things PROJECT [Requirements](https://github.com/microverseinc/curriculum-ruby/blob/main/group-capstone/catalog_of_my_things.md)
+###  Key Features <a name="key-features"></a>
 
 - [x] Implement encapsulation and inheritance with Ruby.
 - [x] Set up associations between classes and objects.
 - [x] Store data in files.
 - [x] Build interactive console apps
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-## 🚶‍♀️🚶‍♀️ Walk Through <a name="live-demo"></a>
-- [Walk through video](https://drive.google.com/file/d/1p60Brs-sTw6bzOQo_GjojbghKLumlIWp/view?usp=sharing)
+<!-- 
+
+## 👁 Walkthrough <a name="#Walkthrough"></a>
+
+[Space Travelers' Hub Web App Walkthrough](https://drive.google.com/file/d/1p60Brs-sTw6bzOQo_GjojbghKLumlIWp/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
