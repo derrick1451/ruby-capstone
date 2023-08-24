@@ -8,25 +8,27 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-   <!--  - [Live Demo](#live-demo)
-    - [Walkthrough](#Walkthrough) -->
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Run tests](#run-tests)
-  <!-- - [Deployment](#triangular_flag_on_post-deployment) -->
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Ruby group capstone - Catalog of my things ](#-ruby-group-capstone---catalog-of-my-things-)
+  - [🛠 Built With ](#-built-with-)
+  - [Tech Stack ](#tech-stack-)
+  - [🔑 Key Features ](#-key-features-)
+    - [Ruby group capstone - Catalog of my things PROJECT Requirements](#ruby-group-capstone---catalog-of-my-things-project-requirements)
+  - [🚶‍♀️🚶‍♀️ Walk Through ](#️️-walk-through-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Run Tests ](#run-tests-)
+  - [👥 Authors ](#-authors-)
+    - [👤 **Habtamu Alemayehu**](#-habtamu-alemayehu)
+    - [👤 **Kayjeee**](#-kayjeee)
+    - [👤 **okongo derrick**](#-okongo-derrick)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 # 📖 Ruby group capstone - Catalog of my things <a name="about-project"></a>
 This repository includes  a console app that will help you to keep a record of different types of things you own: books, music albums, movies, and games. 
@@ -55,6 +57,10 @@ This repository includes  a console app that will help you to keep a record of d
 - [x] Set up associations between classes and objects.
 - [x] Store data in files.
 - [x] Build interactive console apps
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## 🚶‍♀️🚶‍♀️ Walk Through <a name="live-demo"></a>
+- [Walk through video](https://drive.google.com/file/d/1p60Brs-sTw6bzOQo_GjojbghKLumlIWp/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -101,17 +107,17 @@ To run the project, instantiate the class files in `solver.rb` and execute the f
 ### 👤 **Habtamu Alemayehu**
 
 - GitHub: [Benawi](https://github.com/Benawi)
-- Linkdin: [Habtamu](https://www.linkedin.com/in/habtamualemayehu/)
+- Linkedin: [Habtamu](https://www.linkedin.com/in/habtamualemayehu/)
 
-### 👤 ** Kayjeee**
+### 👤 **Kayjeee**
 
 - GitHub: [kayjeee](https://github.com/kayjeee)
 - LinkedIn: [kagiso sebogodi](https://www.linkedin.com/in/kagiso-sebogodi/)
 
-### 👤 **-------------**
+### 👤 **okongo derrick**
 
-- GitHub: [Okongo Derrick](https://github.com/derrick1451)
-
+- GitHub: [Derrick](https://github.com/derrick1451)
+- Linkedin: [Derrick](https://www.linkedin.com/in/okongo-derrick/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
@@ -141,6 +147,6 @@ Give us ⭐️ If you like this project!
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
