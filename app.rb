@@ -1,6 +1,8 @@
 require_relative 'lib/classes/album_collection'
+require_relative 'lib/classes/book_collection'
 class App
   include AlbumCollection
+  include BookCollection
 
   def initialize
     instantiate_common_variables
