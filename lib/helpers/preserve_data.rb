@@ -7,6 +7,7 @@ module PreserveData
     FileUtils.mkdir_p(base_folder)
     save_albums
     save_books
+    save_games
     save_labels
     save_genres
     save_authors
@@ -16,6 +17,7 @@ module PreserveData
     load_albums
     load_books
     load_labels
+    load_games
     load_genres
     load_authors
   end
@@ -34,6 +36,13 @@ module PreserveData
     File.write(books_path, JSON.generate(json_books))
   end
 
+  def save_games
+    games_path = './lib/helpers/json/games.json'
+
+    json_games = @games.map(&:to_json)
+    File.write(games_path, JSON.generate(json_games))
+  end
+
   def save_labels
     labels_path = './lib/helpers/json/labels.json'
     json_labels = @labels.map(&:to_json)
@@ -50,6 +59,21 @@ module PreserveData
     authors_path = './lib/helpers/json/authors.json'
     json_authors = @authors.map(&:to_json)
     File.write(authors_path, JSON.generate(json_authors))
+  end
+
+  def load_games
+    games_path = './lib/helpers/json/games.json'
+    return [] unless File.exist?(games_path)
+
+    file = File.open(games_path)
+    file_data = file.read if file
+    games_data = JSON.parse(file_data)
+    games_data.each do |data|
+      json_data = JSON.parse(data)
+      item = Game.from_json(json_data)
+      @games << item
+      @items[json_data['id']] = item
+    end
   end
 
   def load_books
