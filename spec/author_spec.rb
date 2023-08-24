@@ -1,5 +1,6 @@
 require_relative '../lib/classes/author'
 require_relative '../lib/classes/item'
+require 'JSON'
 
 describe Author do
   describe 'Testing the author class' do
@@ -39,4 +40,45 @@ describe Author do
       end
     end
   end
+
+
+  describe "#to_s" do
+      
+    it "returns author name formatted correctly" do
+      author = Author.new("John", "Doe")
+      expected = "Id: #{author.id}, First Name: John, Last Name: Doe"
+
+      expect(expected).to eq author.to_s
+    end
+
+  end
+
+  describe "#to_json" do
+
+    it "serializes author to json" do
+      author = Author.new("Jane", "Doe")
+      json = author.to_json
+
+      data = JSON.parse(json)
+
+      expect("Jane").to eq data["first_name"]
+      expect( "Doe").to eq data["last_name"]
+        expect( []).to eq data["items"]
+    end
+
+  end
+
+  describe ".from_json" do
+
+    it "deserializes author from json" do
+      json = '{"first_name":"James","last_name":"Joyce"}'
+      author = Author.from_json(JSON.parse(json))
+
+      expect( "James").to eq author.first_name
+      expect("Joyce").to eq author.last_name
+    end
+
+  end
+
+
 end
