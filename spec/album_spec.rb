@@ -1,4 +1,4 @@
-require_relative './lib/classes/music_album'
+require_relative '../lib/classes/music_album'
 require 'json'
 
 describe MusicAlbum do

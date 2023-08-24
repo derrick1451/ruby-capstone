@@ -1,4 +1,4 @@
-require_relative './lib/classes/album_collection'
+require_relative '../lib/classes/album_collection'
 require 'json'
 
 describe AlbumCollection do
