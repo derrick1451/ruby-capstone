@@ -14,6 +14,7 @@
   - [Tech Stack ](#tech-stack-)
   - [🔑 Key Features ](#-key-features-)
     - [Ruby group capstone - Catalog of my things PROJECT Requirements](#ruby-group-capstone---catalog-of-my-things-project-requirements)
+  - [🚶‍♀️🚶‍♀️ Walk Through ](#️️-walk-through-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -56,6 +57,10 @@ This repository includes  a console app that will help you to keep a record of d
 - [x] Set up associations between classes and objects.
 - [x] Store data in files.
 - [x] Build interactive console apps
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## 🚶‍♀️🚶‍♀️ Walk Through <a name="live-demo"></a>
+- [Walk through video](https://drive.google.com/file/d/1p60Brs-sTw6bzOQo_GjojbghKLumlIWp/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
