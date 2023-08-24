@@ -14,6 +14,17 @@ describe MusicAlbum do
       expect(new_album.published_date).to eq Date.today
     end
   end
- 
- 
+  context 'Album can be archived? true or false' do
+    it 'album.move_to_archive => album.archived == true' do
+      new_album = MusicAlbum.new(true, '20011202')
+      new_album.move_to_archive
+      expect(new_album.archived).to eq true
+    end
+    it 'album.move_to_archive => album.archived == false' do
+      new_album = MusicAlbum.new(true, '20211202')
+      new_album.move_to_archive
+      expect(new_album.archived).to eq false
+    end
+  end
+  
 end
