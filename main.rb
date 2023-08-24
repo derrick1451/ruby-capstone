@@ -8,7 +8,7 @@ def main
   loop do
     option = app.display_menu
     option = gets.chomp.to_i
-    app.handle_option(option,app)
+    app.handle_option(option, app)
     break if option == 13
   end
   app.save_collections

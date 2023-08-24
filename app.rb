@@ -24,16 +24,16 @@ class App
     print 'Type your option: '
   end
 
-  def handle_option(option,app)
+  def handle_option(option, app)
     case option
     when 1..6
-      list(option,app)
+      list(option, app)
     when 7..12
-      add(option,app)
+      add(option, app)
     end
   end
 
-  def list(option,app)
+  def list(option, app)
     case option
     when 1
       app.list_all_books
@@ -51,7 +51,7 @@ class App
     end
   end
 
-  def add(option,app)
+  def add(option, app)
     case option
     when 7
       app.add_a_book
