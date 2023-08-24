@@ -40,8 +40,7 @@ describe Author do
       end
     end
   end
-
-
+  
   describe '#to_s' do
     it 'returns author name formatted correctly' do
       author = Author.new('John', 'Doe')
