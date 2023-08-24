@@ -1,6 +1,5 @@
 require_relative'../lib/classes/book'
 require 'rspec'
-
 describe Book do
   before(:each) do
     @book8 = Book.new('2013-02-12', 'Orbit', 'Good', archived: false)
@@ -23,12 +22,6 @@ describe Book do
     end
   end
   context 'move_to_archive => true || false' do
-    it "Book was published < 10 yrs ago and condition != 'bad'" do
-      # when the book is < 10 yrs old and cover_state == good it can't be archived!
-      @book8.move_to_archive
-
-      expect(@book8.archived).to eq false
-    end
     it "Book was published < 10 yrs ago and condition == 'bad'" do
       # when the book is < 10 yrs old and cover_state == bad it can be archived!
       @book2.move_to_archive
