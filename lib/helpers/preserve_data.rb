@@ -6,6 +6,7 @@ module PreserveData
     base_folder = './lib/helpers/json'
     FileUtils.mkdir_p(base_folder)
     save_albums
+    save_books
     save_labels
     save_genres
     save_authors
@@ -13,6 +14,7 @@ module PreserveData
 
   def load_collections
     load_albums
+    load_books
     load_labels
     load_genres
     load_authors
