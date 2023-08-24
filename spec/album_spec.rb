@@ -31,6 +31,11 @@ describe MusicAlbum do
       new_album = MusicAlbum.new(true, '20210101')
       expect(new_album.to_json(new_album)).to eq '{"on_spotify":true,"published_date":"2021-01-01","archived":false}'
     end
-    
+    it 'Should create instance from json' do
+      # rubocop:disable Layout/LineLength
+      new_album = MusicAlbum.from_json(JSON.parse('{"on_spotify":false,"published_date":"2021-01-01","archived":false}'))
+      # rubocop:enable Layout/LineLength
+      expect(new_album.on_spotify).to eq false
+    end
   end
 end
