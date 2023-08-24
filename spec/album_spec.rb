@@ -38,4 +38,36 @@ describe MusicAlbum do
       expect(new_album.on_spotify).to eq false
     end
   end
+
+  describe '#to_json' do
+    it 'converts album to json' do
+      album = MusicAlbum.new(true, Date.today)
+      json = album.to_json
+
+      data = JSON.parse(json)
+
+      expect(data['on_spotify']).to be true
+      expect(data['published_date']).to eq Date.today.to_s
+      expect(data['archived']).to be false
+    end
+  end
+
+  describe '#to_s' do
+    it 'displays album info' do
+      album = MusicAlbum.new(false, Date.new(1990, 1, 1))
+      expected = "Id: #{album.id}, Published at: #{Date.today}, On Spotify?: false"
+      expect(album.to_s).to eq(expected)
+    end
+  end
+
+  describe '.from_json' do
+    it 'creates album from json' do
+      json = '{"on_spotify":true,"published_date":"2000-01-01","archived":false}'
+      album = MusicAlbum.from_json(JSON.parse(json))
+
+      expect(album.on_spotify).to be true
+      expect(album.published_date).to eq Date.new(2000, 1, 1)
+      expect(album.archived).to be false
+    end
+  end
 end
