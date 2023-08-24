@@ -1,6 +1,6 @@
 require_relative '../lib/classes/author'
 require_relative '../lib/classes/item'
-require 'JSON'
+require 'json'
 
 describe Author do
   describe 'Testing the author class' do
