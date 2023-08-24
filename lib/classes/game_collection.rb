@@ -96,4 +96,4 @@ module GameCollection
     item.add_author(new_author)
     puts "Author created successfully\n\n"
   end
-ends
+end
