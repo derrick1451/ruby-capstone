@@ -24,7 +24,6 @@ module PreserveData
 
   def save_albums
     albums_path = './lib/helpers/json/albums.json'
-
     json_albums = @albums.map(&:to_json)
     File.write(albums_path, JSON.generate(json_albums))
   end
@@ -37,21 +36,18 @@ module PreserveData
 
   def save_labels
     labels_path = './lib/helpers/json/labels.json'
-
     json_labels = @labels.map(&:to_json)
     File.write(labels_path, JSON.generate(json_labels))
   end
 
   def save_genres
     genres_path = './lib/helpers/json/genres.json'
-
     json_genres = @genres.map(&:to_json)
     File.write(genres_path, JSON.generate(json_genres))
   end
 
   def save_authors
     authors_path = './lib/helpers/json/authors.json'
-
     json_authors = @authors.map(&:to_json)
     File.write(authors_path, JSON.generate(json_authors))
   end
@@ -59,7 +55,6 @@ module PreserveData
   def load_books
     books_path = './lib/helpers/json/books.json'
     return [] unless File.exist?(books_path)
-
     file = File.open(books_path)
     file_data = file.read if file
     books_data = JSON.parse(file_data)
@@ -74,7 +69,6 @@ module PreserveData
   def load_albums
     albums_path = './lib/helpers/json/albums.json'
     return [] unless File.exist?(albums_path)
-
     file = File.open(albums_path)
     file_data = file.read if file
     albums_data = JSON.parse(file_data)
@@ -89,7 +83,6 @@ module PreserveData
   def load_genres
     genres_path = './lib/helpers/json/genres.json'
     return [] unless File.exist?(genres_path)
-
     file = File.open(genres_path)
     file_data = file.read if file
     genres_data = JSON.parse(file_data)
@@ -105,7 +98,6 @@ module PreserveData
   def load_authors
     authors_path = './lib/helpers/json/authors.json'
     return [] unless File.exist?(authors_path)
-
     file = File.open(authors_path)
     file_data = file.read if file
     authors_data = JSON.parse(file_data)
@@ -121,11 +113,9 @@ module PreserveData
   def load_labels
     labels_path = './lib/helpers/json/labels.json'
     return [] unless File.exist?(labels_path)
-
     file = File.open(labels_path)
     file_data = file.read if file
     labels_data = JSON.parse(file_data)
-
     labels_data.each do |data|
       json_label = JSON.parse(data)
       item_array = json_label['items']
@@ -139,7 +129,6 @@ module PreserveData
     array.each do |item|
       item_id = JSON.parse(item)['id']
       item = @items[item_id]
-
       relational_class.add_item(item) unless item.nil?
     end
   end
