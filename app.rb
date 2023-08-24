@@ -5,24 +5,8 @@ class App
   def initialize
     instantiate_common_variables
   end
-  OPTION_HANDLERS = {
-    1 => :list_all_books,
-    2 => :list_all_albums,
-    3 => :list_all_games,
-    4 => :list_all_genres,
-    5 => :list_all_labels,
-    6 => :list_all_authors,
-    7 => :add_a_book,
-    8 => :create_album,
-    9 => :add_game,
-    10 => :add_a_label,
-    11 => :create_genre,
-    12 => :add_a_author
-    # ...
-  }.freeze
 
   def display_menu
-    # menu display logic
     puts "Please choose an option by entering a number:\n\n"
     puts '1 - List all books'
     puts '2 - List all music albums'
@@ -38,66 +22,49 @@ class App
     puts '12 - Add a Author'
     puts '13 - Exit'
     print 'Type your option: '
-    gets.chomp.to_i
   end
 
-  def handle_option(option, app)
-    handler = OPTION_HANDLERS[option]
-    handler&.call(app)
+  def handle_option(option,app)
+    case option
+    when 1..6
+      list(option,app)
+    when 7..12
+      add(option,app)
+    end
   end
 
-  def list_all_books(app)
-    app.list_all_books
+  def list(option,app)
+    case option
+    when 1
+      app.list_all_books
+    when 2
+      app.list_all_albums
+    when 3
+      app.list_all_games
+    when 4
+      app.list_all_genres
+    when 5
+      app.list_all_labels
+    when 6
+
+      app.list_all_authors
+    end
   end
 
-  def list_all_albums(app)
-    app.list_all_albums
-  end
-
-  def list_all_games(app)
-    app.list_all_games
-  end
-
-  def list_all_genres(app)
-    app.list_all_genres
-  end
-
-  def list_all_labels(app)
-    app.list_all_labels
-  end
-
-  def list_all_authors(app)
-    app.list_all_authors
-  end
-
-  def add_a_book(app)
-    app.add_a_book
-  end
-
-  def create_album(app)
-    app.create_album
-  end
-
-  def add_game(app)
-    app.add_game
-  end
-
-  def add_a_label(app)
-    app.add_a_label
-  end
-
-  def create_genre(app)
-    app.create_genre
-  end
-
-  def add_a_author(app)
-    app.add_a_author
-  end
-
-
-  # Other handler methods ...
-
-  def handle_invalid_option
-    puts 'Invalid option'
+  def add(option,app)
+    case option
+    when 7
+      app.add_a_book
+    when 8
+      app.create_album
+    when 9
+      app.add_game
+    when 10
+      app.add_a_label
+    when 11
+      app.create_genre
+    when 12
+      app.add_a_author
+    end
   end
 end
