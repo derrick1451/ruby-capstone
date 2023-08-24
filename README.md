@@ -51,7 +51,10 @@ This repository includes  a console app that will help you to keep a record of d
 
 ### Ruby group capstone - Catalog of my things PROJECT [Requirements](https://github.com/microverseinc/curriculum-ruby/blob/main/group-capstone/catalog_of_my_things.md)
 
-- [x] Write 
+- [x] Implement encapsulation and inheritance with Ruby.
+- [x] Set up associations between classes and objects.
+- [x] Store data in files.
+- [x] Build interactive console apps
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
