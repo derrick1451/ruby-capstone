@@ -7,6 +7,7 @@ module CollectionHandler
   def instantiate_common_variables
     @albums = []
     @genres = []
+    @games = []
     @labels = []
     @books = []
     @items = {}
@@ -58,7 +59,7 @@ module CollectionHandler
 
   def list_available_items
     available_options = {}
-
+    available_options['games'] = @games unless @albums.empty?
     available_options['albums'] = @albums unless @albums.empty?
     available_options['books'] = @books unless @books.empty?
 
