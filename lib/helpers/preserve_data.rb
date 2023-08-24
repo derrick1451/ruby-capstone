@@ -29,6 +29,12 @@ module PreserveData
     File.write(albums_path, JSON.generate(json_albums))
   end
 
+  def save_books
+    books_path = './lib/helpers/json/books.json'
+    json_books = @books.map(&:to_json)
+    File.write(books_path, JSON.generate(json_books))
+  end
+  
   def save_labels
     labels_path = './lib/helpers/json/labels.json'
 
@@ -48,6 +54,20 @@ module PreserveData
 
     json_authors = @authors.map(&:to_json)
     File.write(authors_path, JSON.generate(json_authors))
+  end
+  def load_books
+    books_path = './lib/helpers/json/books.json'
+    return [] unless File.exist?(books_path)
+
+    file = File.open(books_path)
+    file_data = file.read if file
+    books_data = JSON.parse(file_data)
+    books_data.each do |data|
+      json_data = JSON.parse(data)
+      item = Book.from_json(json_data)
+      @books << item
+      @items[json_data['id']] = item
+    end
   end
 
   def load_albums
