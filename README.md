@@ -69,8 +69,8 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```
-  git clone git@github.com:ProgramKingAbel/TDD-Development.git
-  cd TDD-Development
+  git clone hhttps://github.com/derrick1451/ruby-capstone.git
+  cd ruby-capstone
 ```
 
 ### Install
@@ -80,13 +80,20 @@ Install project dependencies with:
 ```
   bundle install
 ```
+### Run localy
 
-### Run Tests <a name="run-tests"></a>
-
-To run the project, instantiate the class files in `solver.rb` and execute the following command:
+Install project dependencies with:
 
 ```
-  rspec tests
+  execute the following command:
+  ruby `main.rb` and
+```
+### Run Tests <a name="run-tests"></a>
+
+To run the project, instantiate the class files in main.rb and execute the following command:
+
+```
+  rspec ./spec/
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
