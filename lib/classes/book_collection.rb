@@ -33,7 +33,7 @@ module BookCollection
     new_book = Book.new(date, name, cover_state)
     @books << new_book
     puts 'Book created successfully!'
-    end
+  end
 
   def add_a_label
     item = select_item_for('Label')
@@ -56,8 +56,8 @@ module BookCollection
       end
     else
       create_new_label(item)
-end
-end
+    end
+  end
 
   private
 

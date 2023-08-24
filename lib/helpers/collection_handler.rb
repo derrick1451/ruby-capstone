@@ -2,12 +2,13 @@ require_relative 'preserve_data'
 
 module CollectionHandler
   include PreserveData
-  attr_reader :albums, :genres, :labels, :items
+  attr_reader :albums, :genres, :labels, :items, :books
 
   def instantiate_common_variables
     @albums = []
     @genres = []
     @labels = []
+    @books = []
     @items = {}
     @authors = []
   end
@@ -59,6 +60,7 @@ module CollectionHandler
     available_options = {}
 
     available_options['albums'] = @albums unless @albums.empty?
+    available_options['books'] = @books unless @books.empty?
 
     available_options
   end

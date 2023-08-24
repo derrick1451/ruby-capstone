@@ -34,7 +34,7 @@ module PreserveData
     json_books = @books.map(&:to_json)
     File.write(books_path, JSON.generate(json_books))
   end
-  
+
   def save_labels
     labels_path = './lib/helpers/json/labels.json'
 
@@ -55,6 +55,7 @@ module PreserveData
     json_authors = @authors.map(&:to_json)
     File.write(authors_path, JSON.generate(json_authors))
   end
+
   def load_books
     books_path = './lib/helpers/json/books.json'
     return [] unless File.exist?(books_path)
