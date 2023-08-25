@@ -1,5 +1,6 @@
 require_relative '../lib/classes/book'
 require 'rspec'
+require 'json'
 describe Book do
   before(:each) do
     @book8 = Book.new('2013-02-12', 'Orbit', 'Good', archived: false)
