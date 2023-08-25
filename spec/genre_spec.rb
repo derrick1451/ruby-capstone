@@ -18,32 +18,32 @@ describe Genre do
     end
   end
 
-  describe "#to_json" do
-    it "converts to json" do
-      cart = Genre.new("My Cart")
-      cart.items << Item.new("Item 1")
+  describe '#to_json' do
+    it 'converts to json' do
+      cart = Genre.new('My Cart')
+      cart.items << Item.new('Item 1')
 
       expect(cart.to_json).to eq({
-        name: "My Cart",
-        items: [cart.items[0].to_json] 
+        name: 'My Cart',
+        items: [cart.items[0].to_json]
       }.to_json)
     end
   end
 
-  describe "#to_s" do
-    it "returns string with id and name" do
-      cart = Genre.new("My Cart")
-      
+  describe '#to_s' do
+    it 'returns string with id and name' do
+      cart = Genre.new('My Cart')
+
       expect(cart.to_s).to eq("Id: #{cart.id}, Name: My Cart")
     end
   end
 
-  describe ".from_json" do
-    it "creates a Cart from json" do
-      json = {name: "My Cart"}.to_json
+  describe '.from_json' do
+    it 'creates a Cart from json' do
+      json = { name: 'My Cart' }.to_json
       cart = Genre.from_json(JSON.parse(json))
 
-      expect(cart.name).to eq("My Cart")
+      expect(cart.name).to eq('My Cart')
     end
   end
 end

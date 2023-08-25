@@ -32,9 +32,9 @@ describe Game do
     end
   end
 end
-describe "#to_s" do
-  it "returns a string with id, published date, title, multiplayer flag, and last played at" do
-    game = Game.new("My Game", true, Time.now, Date.today)
+describe '#to_s' do
+  it 'returns a string with id, published date, title, multiplayer flag, and last played at' do
+    game = Game.new('My Game', true, Time.now, Date.today)
 
     expect(game.title).to eq 'My Game'
     expect(game.multiplayer).to eq true
@@ -43,17 +43,17 @@ describe "#to_s" do
   end
 end
 
-describe ".from_json" do
-  it "creates a new Game from JSON data" do
+describe '.from_json' do
+  it 'creates a new Game from JSON data' do
     data = {
-      title: "My Game",
+      title: 'My Game',
       multiplayer: true,
       published_date: Date.today
     }.to_json
 
     game = Game.from_json(JSON.parse(data))
 
-    expect(game.title).to eq("My Game")
+    expect(game.title).to eq('My Game')
     expect(game.multiplayer).to eq(true)
     expect(game.published_date).to eq(Date.today)
   end
