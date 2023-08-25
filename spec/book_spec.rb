@@ -72,10 +72,7 @@ end
 describe '#to_s' do
   it 'formats the string correctly' do
     book = Book.new(Date.today, 'Penguin', 'good')
-
-    expected = "Id: #{book.id}, Published at: #{Date.today}," \
-               ' Publisher: Penguin, Cover State: good'
-
+    expected = "Id: #{book.id}, Published at: #{Date.today}," ' Publisher: Penguin, Cover State: good'
     expect(book.to_s).to eq(expected)
   end
 end
