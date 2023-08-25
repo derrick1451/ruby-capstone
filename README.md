@@ -4,25 +4,28 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-    - [Walkthrough](#Walkthrough)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-
-- [📝 License](#license)
+- [�Ruby group capstone - Catalog of my things 🚀](#ruby-group-capstone---catalog-of-my-things-)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Ruby group capstone - Catalog of my things ](#-ruby-group-capstone---catalog-of-my-things-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [👁 Walkthrough ](#-walkthrough-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Run localy](#run-localy)
+    - [Run Tests ](#run-tests-)
+  - [👥 Authors ](#-authors-)
+    - [👤 **Habtamu Alemayehu**](#-habtamu-alemayehu)
+    - [👤 **Kayjeee**](#-kayjeee)
+    - [👤 **okongo derrick**](#-okongo-derrick)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 # 📖 Ruby group capstone - Catalog of my things <a name="about-project"></a>
 
@@ -50,7 +53,7 @@ This repository includes  a console app that will help you to keep a record of d
 
 ## 👁 Walkthrough <a name="Walkthrough"></a>
 
-[Ruby group capstone - Catalog of my things](https://drive.google.com/file/d/1p60Brs-sTw6bzOQo_GjojbghKLumlIWp/view?usp=sharing)
+[Ruby group capstone - Catalog of my things](https://drive.google.com/file/d/1p-FD-SK1DSDMRLGiTpuNjYJOdMWLcB-T/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
