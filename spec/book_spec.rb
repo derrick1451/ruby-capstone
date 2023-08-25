@@ -36,3 +36,45 @@ describe Book do
     end
   end
 end
+describe "#to_json" do
+  it "converts to json with the correct attributes" do
+    book = Book.new(Date.today, "Penguin", "good")
+    
+    expected = {
+      id: book.id,
+      archived: false, 
+      published_date: Date.today,
+      publisher: "Penguin",
+      cover_state: "good"
+    }.to_json
+
+    expect(book.to_json).to eq(expected)
+  end
+end
+describe ".from_json" do
+  it "creates a Book from json data" do
+    data = {
+      published_date: Date.today.iso8601,
+      publisher: "Penguin",
+      cover_state: "good",
+      archived: false
+    }.to_json
+
+    book = Book.from_json(JSON.parse(data))
+
+    expect(book.published_date).to eq(Date.today)
+    expect(book.publisher).to eq("Penguin")
+    expect(book.cover_state).to eq("good")
+    expect(book.archived).to eq(false)
+  end
+end
+describe "#to_s" do
+  it "formats the string correctly" do
+    book = Book.new(Date.today, "Penguin", "good")
+
+    expected = "Id: #{book.id}, Published at: #{Date.today}," + 
+              " Publisher: Penguin, Cover State: good"
+
+    expect(book.to_s).to eq(expected)
+  end
+end
