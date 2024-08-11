@@ -4,7 +4,7 @@ def main
   app.load_collections
   option = nil
   puts 'Welcome To Catalog Of My Things App'
-#loop start here
+#loop begin here
   loop do
     option = app.display_menu
     option = gets.chomp.to_i
