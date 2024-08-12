@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-# <div align="center">🛰Ruby group capstone - Catalog of my things 🚀</div>
+# <div align="center">🛰Ruby group capstone - Catalog of all my things 🚀</div>
 
 # 📗 Table of Contents
 
